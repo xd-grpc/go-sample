@@ -26,8 +26,9 @@ import (
 	"log"
 	"net"
 
+	pb "github.com/xd-grpc/go-sample/helloworld/helloworld"
+
 	"google.golang.org/grpc"
-	pb "google.golang.org/grpc/examples/helloworld/helloworld"
 )
 
 const (

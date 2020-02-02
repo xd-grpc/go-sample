@@ -25,8 +25,9 @@ import (
 	"os"
 	"time"
 
+	pb "github.com/xd-grpc/go-sample/helloworld/helloworld"
+
 	"google.golang.org/grpc"
-	pb "google.golang.org/grpc/examples/helloworld/helloworld"
 )
 
 const (
@@ -53,7 +54,8 @@ func main() {
 	r, err := c.SayHello(ctx, &pb.HelloRequest{Name: name})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
+	} else {
+		log.Print("message sent successfully ... waiting for response ...")
 	}
 	log.Printf("Greeting: %s", r.GetMessage())
 }
-
