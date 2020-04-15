@@ -1,13 +1,12 @@
 package main
 
 import (
+	pb "consignment-service/proto/consignment"
 	"context"
 	"google.golang.org/grpc"
 	"log"
 	"net"
 )
-
-import pb "go-sample/shippy/consignment-service/proto/consignment/consignment"
 
 const (
 	PORT = ":50051"
@@ -76,5 +75,4 @@ func main() {
 	if err := server.Serve(listener); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
-
 }
